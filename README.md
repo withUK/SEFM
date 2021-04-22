@@ -4,7 +4,7 @@ Leeds Beckett University module for Software Engineering for Mobile.
 The path for lab exercises follows the android code labs found on https://developer.android.com/
 ### Android fundamentals 01.2 Part A: Your first interactive UI
 - Task 1: Create and explore a new project <br>
-Held on branch : Task-1-Create-and-explore-a-new-project
+Held on branch : <span style="color:blue">Task-1-Create-and-explore-a-new-project</span>
 - Task 2: Add View elements in the layout editor <br>
 Held on branch : Task-2-Add-View-elements-in-the-layout-editor
 - Task 3: Change UI element attributes <br>
