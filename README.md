@@ -18,3 +18,5 @@ Held on branch : Task-6-Add-onClick-handlers-for-the-buttons <br>
 Additional learning to add extra button to reduce count held on : Task-6a-Add-new-button-and-onClick-handlers
 - Coding challenge <br>
 Held on branch : Your-first-interactive-UI-Coding-challenge
+
+### Android fundamentals 01.2 Part B:The layout editor
