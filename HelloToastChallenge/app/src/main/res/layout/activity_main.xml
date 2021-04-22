@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/button_toast"
-        android:layout_width="92dp"
+        android:layout_width="0dp"
         android:layout_height="78dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -21,7 +21,7 @@
 
     <Button
         android:id="@+id/button_count"
-        android:layout_width="92dp"
+        android:layout_width="0dp"
         android:layout_height="78dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
@@ -34,7 +34,7 @@
 
     <Button
         android:id="@+id/button_countDown"
-        android:layout_width="94dp"
+        android:layout_width="0dp"
         android:layout_height="84dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
@@ -47,8 +47,8 @@
 
     <TextView
         android:id="@+id/show_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="279dp"
+        android:layout_height="283dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:background="#FFFF00"
@@ -58,6 +58,7 @@
         android:textColor="@color/design_default_color_on_primary"
         android:textSize="160sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_toast"
         app:layout_constraintTop_toTopOf="parent" />
 
