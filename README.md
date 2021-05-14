@@ -20,3 +20,5 @@ Additional learning to add extra button to reduce count held on : Task-6a-Add-ne
 Held on branch : Your-first-interactive-UI-Coding-challenge
 
 ### Android fundamentals 01.2 Part B:The layout editor
+- Task 1: Create layout variants
+Held on branch : <span style="color:blue">Task-1-Create-layout-variants</span>
