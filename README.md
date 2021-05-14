@@ -78,3 +78,6 @@ Held on branch : <span style="color:blue">Task-1-Add-and-edit-TextView-elements<
 Held on branch : <span style="color:blue">Task-2-Add-a-ScrollView-and-an-active-web-link</span>
 - Coding challenge <br>
 Held on branch : <span style="color:blue">Coding-challenge</span>
+
+### Related concepts
+Further information around text and scrolling views are found within the Android fundamentals [documentation](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-1-build-your-first-app/1-3-c-text-and-scrolling-views/1-3-c-text-and-scrolling-views.html)
