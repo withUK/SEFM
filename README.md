@@ -72,5 +72,5 @@ Which of the following techniques is more efficient to use within this handler t
 - Use the view parameter that is passed to the click handler with setBackgroundColor(): view.setBackgroundColor()
 
 ### Android fundamentals 01.3: Text and scrolling views
-- Task 1: Add and edit TextView elements
+- Task 1: Add and edit TextView elements <br>
 Held on branch : <span style="color:blue">Task-1-Add-and-edit-TextView-elements</span>
