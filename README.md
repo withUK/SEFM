@@ -36,8 +36,8 @@ Further information around layouts for UI are found within the Android fundament
 Further learning resouces for [android development](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-1-build-your-first-app/1-2-c-layouts-and-resources-for-the-ui/1-2-c-layouts-and-resources-for-the-ui.html)
 
 ### TO DO : Homework
-- Change the app
-#### Answer these questions
+> Change the app
+> Answer these questions
 #### Question 1
 Which two layout constraint attributes on the Zero Button position it vertically equal distance between the other two Button elements? (Pick 2 answers.)
 - `app:layout_constraintBottom_toTopOf="@+id/button_count"`
