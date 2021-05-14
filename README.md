@@ -84,3 +84,27 @@ Further information around text and scrolling views are found within the Android
 
 ### Further learning
 Further learning resouces for [android development](https://developer.android.com/codelabs/android-training-text-and-scrolling-views#9)
+
+### TO DO : Homework
+> Change the app
+<br>
+> Answer these questions
+<br>
+
+#### Question 1
+How many views can you use within a ScrollView? Choose one:
+- `One view only`
+- `One view or one view group`
+- `As many as you need`
+
+#### Question 2
+Which XML attribute do you use in a LinearLayout to show views side by side? Choose one:
+- `android:orientation="horizontal"`
+- `android:orientation="vertical"`
+- `android:layout_width="wrap_content"`
+
+#### Question 3
+Which XML attribute do you use to define the width of the LinearLayout inside the scrolling view? Choose one:
+- `android:layout_width="wrap_content"`
+- `android:layout_width="match_parent"`
+- `android:layout_width="200dp"`
