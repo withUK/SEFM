@@ -70,3 +70,6 @@ The click handler for the Count Button starts with the following method signatur
 Which of the following techniques is more efficient to use within this handler to change the Button element's background color? Choose one:
 - Use findViewById to find the Count Button. Assign the result to a View variable, and then use setBackgroundColor().
 - Use the view parameter that is passed to the click handler with setBackgroundColor(): view.setBackgroundColor()
+
+### Android fundamentals 01.3: Text and scrolling views
+- Task 1
