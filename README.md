@@ -76,3 +76,5 @@ Which of the following techniques is more efficient to use within this handler t
 Held on branch : <span style="color:blue">Task-1-Add-and-edit-TextView-elements</span>
 - Task 2: Add a ScrollView and an active web link <br>
 Held on branch : <span style="color:blue">Task-2-Add-a-ScrollView-and-an-active-web-link</span>
+- Coding challenge <br>
+Held on branch : <span style="color:blue">Coding-challenge</span>
