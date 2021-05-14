@@ -28,3 +28,9 @@ Held on branch : <span style="color:blue">The-layout-editor-Coding-challenge-1</
 Held on branch : <span style="color:blue">Task-2-Change-the-layout-to-LinearLayout</span>
 - Task 3: Change the layout to RelativeLayout <br>
 Held on branch : <span style="color:blue">Task-3-Change-the-layout-to-RelativeLayout</span>
+
+### Related concepts
+Further information around layouts for UI are found within the Android fundamentals [documentation](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-1-build-your-first-app/1-2-c-layouts-and-resources-for-the-ui/1-2-c-layouts-and-resources-for-the-ui.html)
+
+### Further learning
+Further learning resouces for [android development](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-1-build-your-first-app/1-2-c-layouts-and-resources-for-the-ui/1-2-c-layouts-and-resources-for-the-ui.html)
