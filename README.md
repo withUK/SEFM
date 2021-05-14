@@ -22,3 +22,9 @@ Held on branch : Your-first-interactive-UI-Coding-challenge
 ### Android fundamentals 01.2 Part B:The layout editor
 - Task 1: Create layout variants <br>
 Held on branch : <span style="color:blue">Task-1-Create-layout-variants</span>
+- Coding Challenge 1 <br>
+Held on branch : <span style="color:blue">The-layout-editor-Coding-challenge-1</span>
+- Task 2: Change the layout to LinearLayout <br>
+Held on branch : <span style="color:blue">Task-2-Change-the-layout-to-LinearLayout</span>
+- Task 3: Change the layout to RelativeLayout <br>
+Held on branch : <span style="color:blue">Task-3-Change-the-layout-to-RelativeLayout</span>
