@@ -7,4 +7,5 @@
     <string name="editText_second">Enter Your Reply Here</string>
     <string name="button_main">Send</string>
     <string name="text_header_reply">Reply Received</string>
+
 </resources>
