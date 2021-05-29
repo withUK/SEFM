@@ -9,15 +9,26 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class TodoActivity extends AppCompatActivity {
+    private static final String TODO_INDEX = "todoIndex";
 
     private String[] mTodos;
     private int mTodoIndex = 0;
 
     @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt(TODO_INDEX, mTodoIndex);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        /* call the super class onCreate to complete the creation
-         of activity with state changes */
+        /* check for saved state due to changes such as rotation and restore any saved state such as the TODO_INDEX */
+        if (savedInstanceState != null){
+            mTodoIndex = savedInstanceState.getInt(TODO_INDEX, 0);
+        }
+
+        /* call the super class onCreate to complete the creation of activity with state changes */
         super.onCreate(savedInstanceState);
 
         // set the user interface layout for this Activity
