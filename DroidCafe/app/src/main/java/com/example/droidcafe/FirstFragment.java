@@ -20,22 +20,12 @@ public class FirstFragment extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
-
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-            }
-        });
     }
 
     @Override
@@ -44,4 +34,18 @@ public class FirstFragment extends Fragment {
         binding = null;
     }
 
+    public void showDonutOrder(View view) {
+        MainActivity ma = new MainActivity();
+        ma.displayToast(getString(R.string.donut_order_message));
+    }
+
+    public void showIceCreamOrder(View view) {
+        MainActivity ma = new MainActivity();
+        ma.displayToast(getString(R.string.ice_cream_order_message));
+    }
+
+    public void showFroyoOrder(View view) {
+        MainActivity ma = new MainActivity();
+        ma.displayToast(getString(R.string.froyo_order_message));
+    }
 }
