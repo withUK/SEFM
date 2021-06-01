@@ -6,9 +6,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Droid deserts</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="intro_text">Droid Desserts</string>
     <string name="donuts">Donuts are glazed and sprinkled with candy.</string>
     <string name="ice_cream_sandwiches">Ice cream sandwiches have chocolate wafers and vanilla filling.</string>
     <string name="froyo">FroYo is premium self-serve frozen yogurt.</string>
