@@ -21,4 +21,20 @@ public class TodoTaskViewModel extends AndroidViewModel {
         repository = new TodoTaskRepository(application);
         allTasks = repository.getAllTodoTasks();
     }
+
+    public void insert(TodoTask todoTask) {
+        repository.insert(todoTask);
+    }
+    public void update(TodoTask todoTask) {
+        repository.update(todoTask);
+    }
+    public void delete(TodoTask todoTask) {
+        repository.delete(todoTask);
+    }
+    public void deleteAllNotes() {
+        repository.deleteAllTasks();
+    }
+    public LiveData<List<TodoTask>> getAllNotes() {
+        return allTasks;
+    }
 }
