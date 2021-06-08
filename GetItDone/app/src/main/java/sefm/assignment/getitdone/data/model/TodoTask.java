@@ -3,10 +3,14 @@ package sefm.assignment.getitdone.data.model;
 import androidx.annotation.Nullable;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
 
 import java.util.Date;
 
+import sefm.assignment.getitdone.data.utilities.DateConverter;
+
 @Entity(tableName = "todoTask_table")
+@TypeConverters(DateConverter.class)
 public class TodoTask {
 
     // Properties
@@ -21,10 +25,11 @@ public class TodoTask {
     private Date completedDate;
 
     // Constructor
-    public TodoTask(String title, String description, Date dueDate){
+    public TodoTask(String title, String description, Date dueDate, int priority){
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
+        this.priority = priority;
         this.isComplete = false;
     }
 
@@ -32,6 +37,10 @@ public class TodoTask {
     public void setId(int id){
         this.id = id;
     }
+    public void setDueDate(Date dueDate){ this.dueDate = dueDate; }
+    public void setPriority(int priority){ this.priority = priority; }
+    public void setIsComplete(Boolean isComplete){ this.isComplete = isComplete; }
+    public void setCompletedDate(Date completedDate){ this.completedDate = completedDate; }
 
     // Getters
     public int getId() {
