@@ -10,6 +10,6 @@ public interface TodoTaskDao {
     void insert(TodoTask task);
     void update(TodoTask task);
     void delete(TodoTask task);
-    void deleteAllTasks(TodoTask task);
+    void deleteAllTasks();
     LiveData<List<TodoTask>> getAllTasks();
 }
