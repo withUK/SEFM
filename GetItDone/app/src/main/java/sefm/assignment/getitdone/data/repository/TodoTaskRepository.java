@@ -34,8 +34,11 @@ public class TodoTaskRepository {
     public void delete(TodoTask todoTask) {
         new DeleteNoteAsyncTask(todoTaskDao).execute(todoTask);
     }
-    public void deleteAllNotes() {
-        new DeleteAllNotesAsyncTask(todoTaskDao).execute();
+    public void deleteAllTasks() {
+        new DeleteAllTasksAsyncTask(todoTaskDao).execute();
+    }
+    public LiveData<List<TodoTask>> getAllTodoTasks() {
+        return allTodoTasks;
     }
 
     // Methods
@@ -61,7 +64,7 @@ public class TodoTaskRepository {
             todoTaskDao.update(tasks[0]);
             return null;
         }
-    }   
+    }
 
     private static class DeleteNoteAsyncTask extends AsyncTask<TodoTask, Void, Void> {
         private TodoTaskDao todoTaskDao;
@@ -75,9 +78,9 @@ public class TodoTaskRepository {
         }
     }
 
-    private static class DeleteAllNotesAsyncTask extends AsyncTask<Void, Void, Void> {
+    private static class DeleteAllTasksAsyncTask extends AsyncTask<Void, Void, Void> {
         private TodoTaskDao todoTaskDao;
-        private DeleteAllNotesAsyncTask(TodoTaskDao todoTaskDao) {
+        private DeleteAllTasksAsyncTask(TodoTaskDao todoTaskDao) {
             this.todoTaskDao = todoTaskDao;
         }
         @Override

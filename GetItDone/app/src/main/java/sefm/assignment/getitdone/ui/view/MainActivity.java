@@ -1,8 +1,10 @@
-package sefm.assignment.getitdone;
+package sefm.assignment.getitdone.ui.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import sefm.assignment.getitdone.R;
 
 public class MainActivity extends AppCompatActivity {
 
