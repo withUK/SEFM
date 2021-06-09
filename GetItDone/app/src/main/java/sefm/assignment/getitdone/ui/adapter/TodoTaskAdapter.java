@@ -19,6 +19,7 @@ import sefm.assignment.getitdone.data.model.TodoTask;
 
 public class TodoTaskAdapter extends RecyclerView.Adapter<TodoTaskAdapter.TodoTaskHolder> {
 
+    private OnItemClickListener listener;
     private List<TodoTask> todoTasks = new ArrayList<>();
 
     @NonNull
@@ -67,6 +68,23 @@ public class TodoTaskAdapter extends RecyclerView.Adapter<TodoTaskAdapter.TodoTa
             textViewDescription = itemView.findViewById(R.id.text_view_description);
             textViewPriority = itemView.findViewById(R.id.text_view_priority);
             textViewDueDate = itemView.findViewById(R.id.text_view_dueDate);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if (listener != null && position != RecyclerView.NO_POSITION) {
+                        listener.onItemClick(todoTasks.get(position));
+                    }
+                }
+            });
         }
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(TodoTask todoTask);
+    }
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 }

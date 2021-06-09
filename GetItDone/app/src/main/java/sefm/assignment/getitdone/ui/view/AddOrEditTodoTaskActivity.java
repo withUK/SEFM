@@ -110,6 +110,7 @@ public class AddOrEditTodoTaskActivity extends AppCompatActivity {
         data.putExtra(EXTRA_DESCRIPTION, description);
         data.putExtra(EXTRA_DUE_DATE, due_date);
         data.putExtra(EXTRA_PRIORITY, priority);
+
         setResult(RESULT_OK, data);
         finish();
     }

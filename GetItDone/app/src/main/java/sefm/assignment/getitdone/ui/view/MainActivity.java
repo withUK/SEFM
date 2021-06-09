@@ -86,6 +86,19 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Task completed", Toast.LENGTH_SHORT).show();
             }
         }).attachToRecyclerView(recyclerView);
+
+        todoTaskAdapter.setOnItemClickListener(new TodoTaskAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(TodoTask todoTask) {
+                Intent intent = new Intent(MainActivity.this, AddOrEditTodoTaskActivity.class);
+                intent.putExtra(AddOrEditTodoTaskActivity.EXTRA_TODO_TASK_ID, todoTask.getId());
+                intent.putExtra(AddOrEditTodoTaskActivity.EXTRA_TITLE, todoTask.getTitle());
+                intent.putExtra(AddOrEditTodoTaskActivity.EXTRA_DESCRIPTION, todoTask.getDescription());
+                intent.putExtra(AddOrEditTodoTaskActivity.EXTRA_DUE_DATE, todoTask.getDueDate());
+                intent.putExtra(AddOrEditTodoTaskActivity.EXTRA_PRIORITY, todoTask.getPriority());
+                startActivityForResult(intent, EDIT_TODO_TASK_REQUEST);
+            }
+        });
     }
 
     @Override
@@ -102,7 +115,27 @@ public class MainActivity extends AppCompatActivity {
             todoTaskViewModel.insert(todoTask);
 
             Toast.makeText(this, "Task saved", Toast.LENGTH_SHORT).show();
-        } else {
+        }
+        else if (requestCode == ADD_TODO_TASK_REQUEST && resultCode == RESULT_OK){
+
+            int id = data.getIntExtra(AddOrEditTodoTaskActivity.EXTRA_TODO_TASK_ID, -1);
+            if (id == -1) {
+                Toast.makeText(this, "Note can't be updated", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            String title = data.getStringExtra(AddOrEditTodoTaskActivity.EXTRA_TITLE);
+            String description = data.getStringExtra(AddOrEditTodoTaskActivity.EXTRA_DESCRIPTION);
+            Date due_date = DateConverter.toDate(data.getStringExtra(AddOrEditTodoTaskActivity.EXTRA_DUE_DATE));
+            int priority = data.getIntExtra(AddOrEditTodoTaskActivity.EXTRA_PRIORITY, 1);
+
+            TodoTask todoTask = new TodoTask(title, description, due_date, priority);
+            todoTask.setId(id);
+
+            todoTaskViewModel.update(todoTask);
+            Toast.makeText(this, "Task updated", Toast.LENGTH_SHORT).show();
+        }
+        else {
             Toast.makeText(this, "Task not saved", Toast.LENGTH_SHORT).show();
         }
     }
