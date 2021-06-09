@@ -31,6 +31,10 @@ public class TodoTaskViewModel extends AndroidViewModel {
     public void delete(TodoTask todoTask) {
         repository.delete(todoTask);
     }
+    public void completeTask(TodoTask todoTask){
+        todoTask.completeTask();
+        repository.update(todoTask);
+    }
     public void deleteAllTasks() {
         repository.deleteAllTasks();
     }
