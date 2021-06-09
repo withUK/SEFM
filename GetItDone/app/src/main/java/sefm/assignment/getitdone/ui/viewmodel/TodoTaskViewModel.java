@@ -31,10 +31,10 @@ public class TodoTaskViewModel extends AndroidViewModel {
     public void delete(TodoTask todoTask) {
         repository.delete(todoTask);
     }
-    public void deleteAllNotes() {
+    public void deleteAllTasks() {
         repository.deleteAllTasks();
     }
-    public LiveData<List<TodoTask>> getAllNotes() {
+    public LiveData<List<TodoTask>> getAllTasks() {
         return allTasks;
     }
 }

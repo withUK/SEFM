@@ -45,6 +45,6 @@
             android:layout_below="@id/text_view_description"
             android:text="01/01/2022"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
-        
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
