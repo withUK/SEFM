@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         todoTaskViewModel.getAllTasks().observe(this, new Observer<List<TodoTask>>() {
             @Override
             public void onChanged(List<TodoTask> todoTasks) {
-                todoTaskAdapter.setTasks(todoTasks);
+                todoTaskAdapter.submitList(todoTasks);
             }
         });
 

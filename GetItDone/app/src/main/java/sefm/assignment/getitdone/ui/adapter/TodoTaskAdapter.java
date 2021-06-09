@@ -6,7 +6,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -17,10 +21,27 @@ import java.util.Locale;
 import sefm.assignment.getitdone.R;
 import sefm.assignment.getitdone.data.model.TodoTask;
 
-public class TodoTaskAdapter extends RecyclerView.Adapter<TodoTaskAdapter.TodoTaskHolder> {
+public class TodoTaskAdapter extends ListAdapter<TodoTask, TodoTaskAdapter.TodoTaskHolder> {
 
     private OnItemClickListener listener;
-    private List<TodoTask> todoTasks = new ArrayList<>();
+
+    public TodoTaskAdapter() {
+        super(DIFF_CALLBACK);
+    }
+
+    public static final DiffUtil.ItemCallback<TodoTask> DIFF_CALLBACK = new DiffUtil.ItemCallback<TodoTask>() {
+        @Override
+        public boolean areItemsTheSame(@NonNull @NotNull TodoTask oldItem, @NonNull @NotNull TodoTask newItem) {
+            return oldItem.getId() == newItem.getId();
+        }
+
+        @Override
+        public boolean areContentsTheSame(@NonNull @NotNull TodoTask oldItem, @NonNull @NotNull TodoTask newItem) {
+            return oldItem.getTitle().equals(newItem.getTitle()) &&
+                   oldItem.getDescription().equals(newItem.getDescription()) &&
+                   oldItem.getPriority() == newItem.getPriority();
+        }
+    };
 
     @NonNull
     @Override
@@ -33,7 +54,7 @@ public class TodoTaskAdapter extends RecyclerView.Adapter<TodoTaskAdapter.TodoTa
     @Override
     public void onBindViewHolder(@NonNull TodoTaskHolder holder, int position) {
 
-        TodoTask currentTask = todoTasks.get(position);
+        TodoTask currentTask = getItem(position);
 
         holder.textViewTitle.setText(currentTask.getTitle());
         holder.textViewDescription.setText(currentTask.getDescription());
@@ -41,18 +62,8 @@ public class TodoTaskAdapter extends RecyclerView.Adapter<TodoTaskAdapter.TodoTa
         holder.textViewPriority.setText(String.valueOf(currentTask.getPriority()));
     }
 
-    @Override
-    public int getItemCount() {
-        return todoTasks.size();
-    }
-
     public TodoTask getTodoTaskAt(int position) {
-        return todoTasks.get(position);
-    }
-
-    public void setTasks(List<TodoTask> tasks) {
-        this.todoTasks = tasks;
-        notifyDataSetChanged();
+        return getItem(position);
     }
 
     class TodoTaskHolder extends RecyclerView.ViewHolder {
@@ -74,7 +85,7 @@ public class TodoTaskAdapter extends RecyclerView.Adapter<TodoTaskAdapter.TodoTa
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     if (listener != null && position != RecyclerView.NO_POSITION) {
-                        listener.onItemClick(todoTasks.get(position));
+                        listener.onItemClick(getItem(position));
                     }
                 }
             });
