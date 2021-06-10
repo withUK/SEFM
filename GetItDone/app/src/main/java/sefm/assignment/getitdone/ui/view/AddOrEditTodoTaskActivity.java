@@ -5,10 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.NumberPicker;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -48,11 +46,12 @@ public class AddOrEditTodoTaskActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_or_edit_todo_task);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back);
 
         editTextTitle = findViewById(R.id.edit_text_title);
         editTextDescription = findViewById(R.id.edit_text_description);
         editTextDueDate = findViewById(R.id.edit_view_due_date);
+
         numberPickerPriority = findViewById(R.id.number_picker_priority);
         numberPickerPriority.setMinValue(1);
         numberPickerPriority.setMaxValue(10);

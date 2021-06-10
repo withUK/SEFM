@@ -154,6 +154,10 @@ public class MainActivity extends AppCompatActivity {
                 todoTaskViewModel.deleteAllTasks();
                 Toast.makeText(this, "All tasks have been deleted", Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.view_help:
+                Intent intent = new Intent(MainActivity.this, HelpActivity.class);
+                startActivity(intent);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
