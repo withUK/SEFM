@@ -15,13 +15,15 @@ public class TodoTaskRepository {
 
     // Properties
     private TodoTaskDao todoTaskDao;
-    private LiveData<List<TodoTask>> allTodoTasks;
+    private LiveData<List<TodoTask>> allOutstandingTodoTasks;
+    private LiveData<List<TodoTask>> allCompletedTodoTasks;
 
     // Constructor
     public TodoTaskRepository(Application application){
         TodoTaskDatabase database = TodoTaskDatabase.getInstance(application);
         todoTaskDao = database.todoTaskDao();
-        allTodoTasks = todoTaskDao.getAllTasks();
+        allOutstandingTodoTasks = todoTaskDao.getAllOutstandingTasks();
+        allCompletedTodoTasks = todoTaskDao.getAllCompletedTasks();
     }
 
     // CRUD Methods
@@ -37,8 +39,11 @@ public class TodoTaskRepository {
     public void deleteAllTasks() {
         new DeleteAllTasksAsyncTask(todoTaskDao).execute();
     }
-    public LiveData<List<TodoTask>> getAllTodoTasks() {
-        return allTodoTasks;
+    public LiveData<List<TodoTask>> getAllOutstandingTodoTasks() {
+        return allOutstandingTodoTasks;
+    }
+    public LiveData<List<TodoTask>> getAllCompletedTodoTasks() {
+        return allCompletedTodoTasks;
     }
 
     // Methods

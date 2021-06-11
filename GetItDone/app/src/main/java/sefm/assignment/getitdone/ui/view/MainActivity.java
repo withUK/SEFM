@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(todoTaskAdapter);
 
         todoTaskViewModel = ViewModelProviders.of(this).get(TodoTaskViewModel.class);
-        todoTaskViewModel.getAllTasks().observe(this, new Observer<List<TodoTask>>() {
+        todoTaskViewModel.getAllOutstandingTasks().observe(this, new Observer<List<TodoTask>>() {
             @Override
             public void onChanged(List<TodoTask> todoTasks) {
                 todoTaskAdapter.submitList(todoTasks);
@@ -155,9 +155,12 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "All tasks have been deleted", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.view_help:
-                Intent intent = new Intent(MainActivity.this, HelpActivity.class);
-                startActivity(intent);
+                Intent helpIntent = new Intent(MainActivity.this, HelpActivity.class);
+                startActivity(helpIntent);
                 return true;
+            case R.id.view_completed:
+                Intent completedIntent = new Intent(MainActivity.this, CompletedTodoTasksActivity.class);
+                startActivity(completedIntent);
             default:
                 return super.onOptionsItemSelected(item);
         }

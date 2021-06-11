@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GetItDone">
+        <activity android:name=".ui.view.CompletedTodoTasksActivity"
+            android:parentActivityName=".ui.view.MainActivity" />
         <activity
             android:name=".ui.view.HelpActivity"
-            android:parentActivityName=".ui.view.MainActivity"/>
+            android:parentActivityName=".ui.view.MainActivity" />
         <activity
             android:name=".ui.view.MainActivity"
             android:launchMode="singleTop">

@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginEnd="10dp"
     android:layout_marginStart="10dp"
-    android:layout_marginTop="10dp">
+    android:layout_marginTop="10dp"
+    android:backgroundTint="@color/semiTransparentColor">
 
     <RelativeLayout
         android:layout_width="wrap_content"

@@ -14,12 +14,14 @@ import sefm.assignment.getitdone.data.repository.TodoTaskRepository;
 public class TodoTaskViewModel extends AndroidViewModel {
 
     private TodoTaskRepository repository;
-    private LiveData<List<TodoTask>> allTasks;
+    private LiveData<List<TodoTask>> allOutstandingTasks;
+    private LiveData<List<TodoTask>> allCompletedTasks;
 
     public TodoTaskViewModel(@NonNull Application application) {
         super(application);
         repository = new TodoTaskRepository(application);
-        allTasks = repository.getAllTodoTasks();
+        allOutstandingTasks = repository.getAllOutstandingTodoTasks();
+        allCompletedTasks = repository.getAllCompletedTodoTasks();
     }
 
     public void insert(TodoTask todoTask) {
@@ -38,7 +40,10 @@ public class TodoTaskViewModel extends AndroidViewModel {
     public void deleteAllTasks() {
         repository.deleteAllTasks();
     }
-    public LiveData<List<TodoTask>> getAllTasks() {
-        return allTasks;
+    public LiveData<List<TodoTask>> getAllOutstandingTasks() {
+        return allOutstandingTasks;
+    }
+    public LiveData<List<TodoTask>> getAllCompletedTasks() {
+        return allCompletedTasks;
     }
 }
