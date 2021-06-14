@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(this, "Task saved", Toast.LENGTH_SHORT).show();
         }
-        else if (requestCode == ADD_TODO_TASK_REQUEST && resultCode == RESULT_OK){
+        else if (requestCode == EDIT_TODO_TASK_REQUEST && resultCode == RESULT_OK){
 
             int id = data.getIntExtra(AddOrEditTodoTaskActivity.EXTRA_TODO_TASK_ID, -1);
             if (id == -1) {

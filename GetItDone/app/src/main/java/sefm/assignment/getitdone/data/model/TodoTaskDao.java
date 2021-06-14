@@ -19,8 +19,8 @@ public interface TodoTaskDao {
     void delete(TodoTask task);
     @Query("DELETE FROM todoTask_table")
     void deleteAllTasks();
-    @Query("SELECT * FROM todoTask_table WHERE isComplete == 0 ORDER BY dueDate DESC, priority DESC")
+    @Query("SELECT * FROM todoTask_table WHERE isComplete == 0 ORDER BY dueDate ASC, priority ASC")
     LiveData<List<TodoTask>> getAllOutstandingTasks();
-    @Query("SELECT * FROM todoTask_table WHERE isComplete == 1 ORDER BY dueDate DESC, priority DESC")
+    @Query("SELECT * FROM todoTask_table WHERE isComplete == 1 ORDER BY dueDate ASC, priority ASC")
     LiveData<List<TodoTask>> getAllCompletedTasks();
 }
