@@ -1,6 +1,13 @@
 # SEFM
 Leeds Beckett University module for Software Engineering for Mobile.
 
+## Assignment
+### Video Demonstration
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Vz0PDVrmY7M
+" target="_blank"><img src="http://img.youtube.com/vi/Vz0PDVrmY7M/0.jpg" 
+alt="Demonstration of application" width="240" height="180" border="10" /></a>
+
+
 ## Lab Exercises
 - [First Interactive UI](https://github.com/withUK/SEFM/blob/main/LAB_EXERCISES.md#android-fundamentals-012-part-a-your-first-interactive-ui)
 - [Layout Editor](https://github.com/withUK/SEFM/blob/main/LAB_EXERCISES.md#android-fundamentals-012-part-bthe-layout-editor)
