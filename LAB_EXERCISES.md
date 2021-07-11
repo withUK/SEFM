@@ -165,3 +165,11 @@ Choose one:
 - Get the current count value out of the Intent.
 - Update the TextView for the count.
 - All of the above.
+
+### Android fundamentals 2.2: Activity lifecycle and state
+- Task 1: Add lifecycle callbacks to TwoActivities
+Held on branch : <span style="color:blue">Task-1-Add-lifecycle-callbacks-to-TwoActivities</span>
+- Task 2: Save and restore the Activity instance state
+Held on branch : <span style="color:blue">Task-2-Save-and-restore-the-Activity-instance-state</span>
+- Coding challenge
+Held on branch : <span style="color:blue">Coding-challenge-Shopping-list-app</span>
