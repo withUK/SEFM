@@ -1,5 +1,6 @@
 package sefm.assignment.getitdone.ui.adapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,7 @@ import java.util.Locale;
 
 import sefm.assignment.getitdone.R;
 import sefm.assignment.getitdone.data.model.TodoTask;
+import sefm.assignment.getitdone.data.utilities.DateConverter;
 
 public class TodoTaskAdapter extends ListAdapter<TodoTask, TodoTaskAdapter.TodoTaskHolder> {
 
@@ -38,8 +40,9 @@ public class TodoTaskAdapter extends ListAdapter<TodoTask, TodoTaskAdapter.TodoT
         @Override
         public boolean areContentsTheSame(@NonNull @NotNull TodoTask oldItem, @NonNull @NotNull TodoTask newItem) {
             return oldItem.getTitle().equals(newItem.getTitle()) &&
-                   oldItem.getDescription().equals(newItem.getDescription()) &&
-                   oldItem.getPriority() == newItem.getPriority();
+                    oldItem.getDescription().equals(newItem.getDescription()) &&
+                    oldItem.getDueDate().equals(newItem.getDueDate()) &&
+                    oldItem.getPriority() == newItem.getPriority();
         }
     };
 
@@ -58,8 +61,18 @@ public class TodoTaskAdapter extends ListAdapter<TodoTask, TodoTaskAdapter.TodoT
 
         holder.textViewTitle.setText(currentTask.getTitle());
         holder.textViewDescription.setText(currentTask.getDescription());
-        holder.textViewDueDate.setText(String.valueOf(currentTask.getDueDate()));
+        holder.textViewDueDate.setText(DateConverter.toStringFromDate(currentTask.getDueDate()));
         holder.textViewPriority.setText(String.valueOf(currentTask.getPriority()));
+        holder.textViewCompletedDate.setText(DateConverter.toStringFromDate(currentTask.getCompletedDate()));
+        if (currentTask.getCompletedDate().after(currentTask.getDueDate()))
+        {
+            holder.textViewCompletedDate.setTextColor(Color.GREEN);
+        }
+        if (currentTask.getCompletedDate().before(currentTask.getDueDate()) || currentTask.getCompletedDate().equals(currentTask.getDueDate()))
+        {
+            holder.textViewCompletedDate.setTextColor(Color.RED);
+        }
+
     }
 
     public TodoTask getTodoTaskAt(int position) {
@@ -71,6 +84,7 @@ public class TodoTaskAdapter extends ListAdapter<TodoTask, TodoTaskAdapter.TodoT
         private TextView textViewDescription;
         private TextView textViewPriority;
         private TextView textViewDueDate;
+        private TextView textViewCompletedDate;
 
         public TodoTaskHolder(View itemView) {
             super(itemView);
@@ -79,6 +93,7 @@ public class TodoTaskAdapter extends ListAdapter<TodoTask, TodoTaskAdapter.TodoT
             textViewDescription = itemView.findViewById(R.id.text_view_description);
             textViewPriority = itemView.findViewById(R.id.text_view_priority);
             textViewDueDate = itemView.findViewById(R.id.text_view_dueDate);
+            textViewCompletedDate = itemView.findViewById(R.id.text_view_completedDate);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
