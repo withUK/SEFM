@@ -64,15 +64,17 @@ public class TodoTaskAdapter extends ListAdapter<TodoTask, TodoTaskAdapter.TodoT
         holder.textViewDueDate.setText(DateConverter.toStringFromDate(currentTask.getDueDate()));
         holder.textViewPriority.setText(String.valueOf(currentTask.getPriority()));
         holder.textViewCompletedDate.setText(DateConverter.toStringFromDate(currentTask.getCompletedDate()));
-        if (currentTask.getCompletedDate().after(currentTask.getDueDate()))
+        if (currentTask.getCompletedDate() != null)
         {
-            holder.textViewCompletedDate.setTextColor(Color.GREEN);
+            if (currentTask.getCompletedDate().after(currentTask.getDueDate()))
+            {
+                holder.textViewCompletedDate.setTextColor(Color.GREEN);
+            }
+            else
+            {
+                holder.textViewCompletedDate.setTextColor(Color.RED);
+            }
         }
-        if (currentTask.getCompletedDate().before(currentTask.getDueDate()) || currentTask.getCompletedDate().equals(currentTask.getDueDate()))
-        {
-            holder.textViewCompletedDate.setTextColor(Color.RED);
-        }
-
     }
 
     public TodoTask getTodoTaskAt(int position) {
