@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(AddOrEditTodoTaskActivity.EXTRA_TODO_TASK_ID, todoTask.getId());
                 intent.putExtra(AddOrEditTodoTaskActivity.EXTRA_TITLE, todoTask.getTitle());
                 intent.putExtra(AddOrEditTodoTaskActivity.EXTRA_DESCRIPTION, todoTask.getDescription());
-                intent.putExtra(AddOrEditTodoTaskActivity.EXTRA_DUE_DATE, todoTask.getDueDate());
+                intent.putExtra(AddOrEditTodoTaskActivity.EXTRA_DUE_DATE, DateConverter.toStringFromDate(todoTask.getDueDate()));
                 intent.putExtra(AddOrEditTodoTaskActivity.EXTRA_PRIORITY, todoTask.getPriority());
                 startActivityForResult(intent, EDIT_TODO_TASK_REQUEST);
             }
@@ -108,7 +108,8 @@ public class MainActivity extends AppCompatActivity {
 
             String title = data.getStringExtra(AddOrEditTodoTaskActivity.EXTRA_TITLE);
             String description = data.getStringExtra(AddOrEditTodoTaskActivity.EXTRA_DESCRIPTION);
-            Date due_date = DateConverter.toDate(data.getStringExtra(AddOrEditTodoTaskActivity.EXTRA_DUE_DATE));
+            String dd = data.getStringExtra(AddOrEditTodoTaskActivity.EXTRA_DUE_DATE);
+            Date due_date = DateConverter.toDateFromString(dd);
             int priority = data.getIntExtra(AddOrEditTodoTaskActivity.EXTRA_PRIORITY, 1);
 
             TodoTask todoTask = new TodoTask(title, description, due_date, priority);
@@ -126,7 +127,8 @@ public class MainActivity extends AppCompatActivity {
 
             String title = data.getStringExtra(AddOrEditTodoTaskActivity.EXTRA_TITLE);
             String description = data.getStringExtra(AddOrEditTodoTaskActivity.EXTRA_DESCRIPTION);
-            Date due_date = DateConverter.toDate(data.getStringExtra(AddOrEditTodoTaskActivity.EXTRA_DUE_DATE));
+            String dd = data.getStringExtra(AddOrEditTodoTaskActivity.EXTRA_DUE_DATE);
+            Date due_date = DateConverter.toDateFromString(dd);
             int priority = data.getIntExtra(AddOrEditTodoTaskActivity.EXTRA_PRIORITY, 1);
 
             TodoTask todoTask = new TodoTask(title, description, due_date, priority);

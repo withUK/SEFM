@@ -2,6 +2,7 @@ package sefm.assignment.getitdone.data.utilities;
 
 import androidx.room.TypeConverter;
 
+import java.text.DateFormat;
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,7 +20,7 @@ public class DateConverter {
     }
 
     @TypeConverter
-    public static Date toDate(String dateString){
+    public static Date toDateFromString(String dateString){
         if(dateString == null)
             return null;
 
@@ -27,6 +28,17 @@ public class DateConverter {
         SimpleDateFormat simpledateformat = new SimpleDateFormat("dd/MM/yyyy");
 
         Date stringDate = simpledateformat.parse(dateString, pos);
+        return stringDate;
+    }
+
+    @TypeConverter
+    public static String toStringFromDate(Date date){
+        if(date == null)
+            return null;
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yy");
+        String stringDate = dateFormat.format(date);
+
         return stringDate;
     }
 }
