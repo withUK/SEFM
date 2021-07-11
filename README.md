@@ -2,24 +2,26 @@
 Leeds Beckett University module for Software Engineering for Mobile.
 
 ## Lab Exercises
-- [First Interactive UI]()
-- [Layout Editor]()
-- [Text & Scrolling Views]()
-- [Activities & Intents]()
-- [Activity Lifecycle & State]()
+- [First Interactive UI](https://github.com/withUK/SEFM/blob/main/LAB_EXERCISES.md#android-fundamentals-012-part-a-your-first-interactive-ui)
+- [Layout Editor](https://github.com/withUK/SEFM/blob/main/LAB_EXERCISES.md#android-fundamentals-012-part-bthe-layout-editor)
+- [Text & Scrolling Views](https://github.com/withUK/SEFM/blob/main/LAB_EXERCISES.md#android-fundamentals-013-text-and-scrolling-views)
+- [Activities & Intents](https://github.com/withUK/SEFM/blob/main/LAB_EXERCISES.md#android-fundamentals-021-activities-and-intents)
+- [Activity Lifecycle & State](https://github.com/withUK/SEFM/blob/main/LAB_EXERCISES.md#android-fundamentals-22-activity-lifecycle-and-state)
 
 ## Case Study : Todo App
 ### Todo App
-- [First Todo]()
-- [Todo Detail]()
+- [First Todo](https://github.com/ebbi/todo-first-app.git)
+[Branch](https://github.com/withUK/SEFM/tree/case-study-to-do-app)
+- [Todo Detail](https://github.com/ebbi/todo-detail-app.git)
+[Branch](https://github.com/withUK/SEFM/tree/case-study-to-do-detail-app)
 
 ### Navigation
-- [Clickable Images]()
-- [User Navigation]()
-- [RecyclerView]()
+- [Clickable Images](https://codelabs.developers.google.com/codelabs/android-training-clickable-images/index.html?index=..%2F..android-training#0)
+- [User Navigation](https://codelabs.developers.google.com/codelabs/android-training-provide-user-navigation/#0)
+- [RecyclerView](https://codelabs.developers.google.com/codelabs/android-training-create-recycler-view/#0)
 
 ### Fragments
-- [Fragments]()
+- [Fragments](https://developer.android.com/codelabs/advanced-android-training-fragments?index=..%2F..index#1)
 
 ### Todo Revisited
 - [Fragment App]()
