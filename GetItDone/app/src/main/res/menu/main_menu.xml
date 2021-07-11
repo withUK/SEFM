@@ -5,15 +5,15 @@
 
     <item
         android:id="@+id/view_help"
-        android:title="Help"
+        android:title="@string/lbl_help"
         app:showAsAction="never" />
     <item
         android:id="@+id/view_completed"
-        android:title="See completed"
+        android:title="@string/lbl_see_completed"
         app:showAsAction="never" />
     <item
         android:id="@+id/delete_all_tasks"
-        android:title="Delete all tasks"
+        android:title="@string/lbl_delete_all_tasks"
         app:showAsAction="never" />
 
 </menu>

@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Get It Done</string>
+    <string name="lbl_title">Title:</string>
+    <string name="lbl_description">Description:</string>
+    <string name="lbl_duedate">Due date:</string>
+    <string name="hint_date">01/02/2021</string>
+    <string name="lbl_introduction">Introduction</string>
+    <string name="txt_introduction">This app has been designed with ease in mind. Keeping the</string>
+    <string name="lbl_delete">Delete</string>
+    <string name="txt_leftswipe">Deleting a task is easy. A simple swipe to the left on the item and this will be removed. This action cannot be undone, so be sure.</string>
+    <string name="lbl_confirm">Confirm</string>
+    <string name="txt_rightswipe">To confirm a task as completed swipe to the right and the task will be removed from the main view and marked as complete with today\'s date.</string>
+    <string name="lbl_about">About</string>
+    <string name="lbl_priority">Priority:</string>
+    <string name="txt_default_priority">1</string>
+    <string name="lbl_delete_all_tasks">Delete all tasks</string>
+    <string name="lbl_see_completed">See completed</string>
+    <string name="lbl_help">Help</string>
 </resources>
