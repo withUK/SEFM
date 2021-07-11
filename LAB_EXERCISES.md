@@ -32,23 +32,20 @@ Further information around layouts for UI are found within the Android fundament
 ### Further learning
 Further learning resouces for [android development](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-1-build-your-first-app/1-2-c-layouts-and-resources-for-the-ui/1-2-c-layouts-and-resources-for-the-ui.html)
 
-### TO DO : Homework
-> Change the app
-<br>
+### Homework
 > Answer these questions
 <br>
-
 #### Question 1
 Which two layout constraint attributes on the Zero Button position it vertically equal distance between the other two Button elements? (Pick 2 answers.)
-- `app:layout_constraintBottom_toTopOf="@+id/button_count"`
+- `app:layout_constraintBottom_toTopOf="@+id/button_count"` ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
 - `android:layout_marginBottom="8dp"`
 - `android:layout_marginStart="16dp"`
 - `app:layout_constraintTop_toBottomOf="@+id/button_toast"`
-- `android:layout_marginTop="8dp"`
+- `android:layout_marginTop="8dp"` ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
 
 #### Question 2
 Which layout constraint attribute on the Zero Button positions it horizontally in alignment with the other two Button elements?
-- `app:layout_constraintLeft_toLeftOf="parent"`
+- `app:layout_constraintLeft_toLeftOf="parent"` ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
 - `app:layout_constraintBottom_toTopOf="@+id/button_count"`
 - `android:layout_marginBottom="8dp"`
 - `app:layout_constraintTop_toBottomOf="@+id/button_toast"`
@@ -56,8 +53,8 @@ Which layout constraint attribute on the Zero Button positions it horizontally i
 #### Question 3
 What is the correct signature for a method used with the android:onClick XML attribute?
 - `public void callMethod()`
-- `public void callMethod(View view)`
-- `private void callMethod(View view)`
+- `public void callMethod(View view)` ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
+- `private void callMethod(View view)` 
 - `public boolean callMethod(View view)`
 
 #### Question 4
@@ -65,8 +62,8 @@ The click handler for the Count Button starts with the following method signatur
 `public void countUp(View view)` <br>
 
 Which of the following techniques is more efficient to use within this handler to change the Button element's background color? Choose one:
-- Use findViewById to find the Count Button. Assign the result to a View variable, and then use setBackgroundColor().
-- Use the view parameter that is passed to the click handler with setBackgroundColor(): view.setBackgroundColor()
+- Use findViewById to find the Count Button. Assign the result to a View variable, and then use setBackgroundColor() ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
+- Use the view parameter that is passed to the click handler with setBackgroundColor(): view.setBackgroundColor() 
 
 ### Android fundamentals 01.3: Text and scrolling views
 - Task 1: Add and edit TextView elements <br>
@@ -82,28 +79,25 @@ Further information around text and scrolling views are found within the Android
 ### Further learning
 Further learning resouces for [android development](https://developer.android.com/codelabs/android-training-text-and-scrolling-views#9)
 
-### TO DO : Homework
-> Change the app
-<br>
+### Homework
 > Answer these questions
 <br>
-
 #### Question 1
 How many views can you use within a ScrollView? Choose one:
 - `One view only`
-- `One view or one view group`
+- `One view or one view group` ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
 - `As many as you need`
 
 #### Question 2
 Which XML attribute do you use in a LinearLayout to show views side by side? Choose one:
-- `android:orientation="horizontal"`
+- `android:orientation="horizontal"` ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
 - `android:orientation="vertical"`
 - `android:layout_width="wrap_content"`
 
 #### Question 3
 Which XML attribute do you use to define the width of the LinearLayout inside the scrolling view? Choose one:
 - `android:layout_width="wrap_content"`
-- `android:layout_width="match_parent"`
+- `android:layout_width="match_parent"` ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
 - `android:layout_width="200dp"`
 
 ### Android fundamentals 02.1: Activities and intents
@@ -124,14 +118,15 @@ Further information around text and scrolling views are found within the Android
 ### Further learning
 Further learning resouces for [android development](https://developer.android.com/codelabs/android-training-create-an-activity#10)
 
-### TO DO : Homework
+### Homework
 > Answer these questions
+<br>
 #### Question 1
 What changes are made when you add a second Activity to your app by choosing File > New > Activity and an Activity template? 
 Choose one:
 - The second Activity is added as a Java class. You still need to add the XML layout file.
 - The second Activity XML layout file is created and a Java class added. You still need to define the class signature.
-- The second Activity is added as a Java class, the XML layout file is created, and the AndroidManifest.xml file is changed to declare a second Activity.
+- The second Activity is added as a Java class, the XML layout file is created, and the AndroidManifest.xml file is changed to declare a second Activity. ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
 - The second Activity XML layout file is created, and the AndroidManifest.xml file is changed to declare a second Activity.
 
 #### Question 2
@@ -139,14 +134,14 @@ What happens if you remove the android:parentActivityName and the <meta-data> el
 Choose one:
 - The second Activity no longer appears when you try to start it with an explicit Intent.
 - The second Activity XML layout file is deleted.
-- The Back button no longer works in the second Activity to send the user back to the main Activity.
-- The Up button in the app bar no longer appears in the second Activity to send the user back to the parent Activity.
+- The Back button no longer works in the second Activity to send the user back to the main Activity. 
+- The Up button in the app bar no longer appears in the second Activity to send the user back to the parent Activity. ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
 
 #### Question 3
 Which constructor method do you use to create a new explicit Intent? 
 Choose one:
-- `new Intent()`
-- `new Intent(Context context, Class<?> class)`
+- `new Intent()` 
+- `new Intent(Context context, Class<?> class)` ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
 - `new Intent(String action, Uri uri)`
 - `new Intent(String action)`
 
@@ -156,15 +151,15 @@ Choose one:
 - As the Intent data
 - As the Intent TEXT_REQUEST
 - As an Intent action
-- As an Intent extra
+- As an Intent extra ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
 
 #### Question 5
 In the HelloToast app homework, how do you display the current count in the second "Hello" Activity? 
 Choose one:
 - Get the Intent that the Activity was launched with.
-- Get the current count value out of the Intent.
+- Get the current count value out of the Intent. 
 - Update the TextView for the count.
-- All of the above.
+- All of the above. ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
 
 ### Android fundamentals 2.2: Activity lifecycle and state
 - Task 1: Add lifecycle callbacks to TwoActivities
