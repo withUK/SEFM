@@ -35,6 +35,7 @@ Further learning resouces for [android development](https://google-developer-tra
 ### Homework
 > Answer these questions
 <br>
+
 #### Question 1
 Which two layout constraint attributes on the Zero Button position it vertically equal distance between the other two Button elements? (Pick 2 answers.)
 - `app:layout_constraintBottom_toTopOf="@+id/button_count"` ![tick](https://user-images.githubusercontent.com/22601795/123541061-4aec3080-d73a-11eb-98cf-efff87d37041.png)
@@ -82,6 +83,7 @@ Further learning resouces for [android development](https://developer.android.co
 ### Homework
 > Answer these questions
 <br>
+
 #### Question 1
 How many views can you use within a ScrollView? Choose one:
 - `One view only`
@@ -121,6 +123,7 @@ Further learning resouces for [android development](https://developer.android.co
 ### Homework
 > Answer these questions
 <br>
+
 #### Question 1
 What changes are made when you add a second Activity to your app by choosing File > New > Activity and an Activity template? 
 Choose one:
