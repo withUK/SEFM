@@ -10,9 +10,9 @@ Leeds Beckett University module for Software Engineering for Mobile.
 
 ## Case Study : Todo App
 ### Todo App
-- [First Todo](https://github.com/ebbi/todo-first-app.git)
+- [First Todo](https://github.com/ebbi/todo-first-app.git)<br>
 [Branch](https://github.com/withUK/SEFM/tree/case-study-to-do-app)
-- [Todo Detail](https://github.com/ebbi/todo-detail-app.git)
+- [Todo Detail](https://github.com/ebbi/todo-detail-app.git)<br>
 [Branch](https://github.com/withUK/SEFM/tree/case-study-to-do-detail-app)
 
 ### Navigation
